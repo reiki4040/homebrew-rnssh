@@ -1,6 +1,6 @@
 require "formula"
 
-HOMEBREW_RNSSH_VERSION="0.3.1"
+HOMEBREW_RNSSH_VERSION="0.3.2"
 
 class Rnssh < Formula
   homepage 'https://github.com/reiki4040/rnssh'
@@ -8,10 +8,10 @@ class Rnssh < Formula
   if OS.mac?
     if Hardware.is_64_bit?
       url "https://github.com/reiki4040/rnssh/releases/download/v#{HOMEBREW_RNSSH_VERSION}/rnssh-#{HOMEBREW_RNSSH_VERSION}-darwin-amd64.zip"
-      sha1 '2493693a373240a726f074e056283a03d5490526'
+      sha1 '12b0f20a92039bcd5b3c81ed35119bb3477f3e26'
     else
       url "https://github.com/reiki4040/rnssh/releases/download/v#{HOMEBREW_RNSSH_VERSION}/rnssh-#{HOMEBREW_RNSSH_VERSION}-darwin-amd32.zip"
-      sha1 '17f283b198c27c8ca9ff256a677e5990eb76ac3a'
+      sha1 '2b45d665161da1b2284877fee42a07d0dba8e38f'
     end
   end
 
