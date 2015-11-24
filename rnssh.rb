@@ -3,15 +3,15 @@ require "formula"
 class Rnssh < Formula
   desc "easy ssh login to EC2."
   homepage 'https://github.com/reiki4040/rnssh'
-  version "0.3.5"
+  version "0.3.6"
 
   if OS.mac?
     if Hardware.is_64_bit?
       url "https://github.com/reiki4040/rnssh/releases/download/v" + version + "/rnssh-" + version + "-darwin-amd64.zip"
-      sha256 '7eee194af76e3727909ce483fc725eda3ba29460345648c89938ec04311cebd0'
+      sha256 '8bd237c1ec36010028c12f1fe6a69bd33892600a06a0dcc27019fcd6025d8960'
     else
       url "https://github.com/reiki4040/rnssh/releases/download/v" + version + "/rnssh-" + version + "-darwin-386.zip"
-      sha256 '58b3ee14e29291ba5ec632fdf2a9dffcc47553d346ec5f07cf8608c5917dcf7d'
+      sha256 'e42c5734c95c12f87eb4fd73012c2e6fd0c21581b50e8463db05bd052529140c'
     end
   end
 
