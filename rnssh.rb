@@ -24,13 +24,13 @@ class Rnssh < Formula
   def caveats
     msg = <<-EOF.undent
     # rnssh need AWS access key for working.
-	# Please set key/secret to AWS credentials (~/.aws/credentials)
+    # Please set key/secret to AWS credentials (~/.aws/credentials)
 
-	[default]
-	aws_access_key_id=your_key_id
-	aws_secret_access_key=your_secret
+    [default]
+    aws_access_key_id=your_key_id
+    aws_secret_access_key=your_secret
 
-	# or environment variable for AWS connection.
+    # or environment variable for AWS connection.
     # (~/.bashrc, ~/.zshrc or other.)
 
     export AWS_ACCESS_KEY_ID=YOUR_AWS_ACCESS_KEY
@@ -38,7 +38,7 @@ class Rnssh < Formula
 
     # set default aws region.
 
-	rnssh --init
+    rnssh --init
 
 EOF
   end
