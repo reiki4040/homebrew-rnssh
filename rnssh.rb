@@ -4,17 +4,17 @@ class Rnssh < Formula
   desc "easy ssh login to EC2."
   homepage 'https://github.com/reiki4040/rnssh'
   version "0.3.9"
+  devel_version = "0.4.0"
 
   if OS.mac?
-    if Hardware.is_64_bit?
-      url "https://github.com/reiki4040/rnssh/releases/download/v" + version + "/rnssh-" + version + "-darwin-amd64.zip"
-      sha256 'f35a700ade64017806735f25576683c6ccf868805d6b97972ecb239e51372686'
-    else
-      url "https://github.com/reiki4040/rnssh/releases/download/v" + version + "/rnssh-" + version + "-darwin-386.zip"
-      sha256 '0d17789686ddfd1c27c59cff7c69bea75c62bff54884881912e4cdf75131f66b'
-    end
+    url "https://github.com/reiki4040/rnssh/releases/download/v" + version + "/rnssh-" + version + "-darwin-amd64.zip"
+    sha256 'f35a700ade64017806735f25576683c6ccf868805d6b97972ecb239e51372686'
   end
 
+  devel do
+    url "https://github.com/reiki4040/rnssh/releases/download/v" + devel_version + "/rnssh-" + devel_version + "-darwin-amd64.zip"
+    sha256 '9c6a53c9b27bce196a7ac3a52c8b5cbabe12e88415df4a28412f508a834ed58a'
+  end
 
   def install
     bin.install 'rnssh'
@@ -38,7 +38,11 @@ class Rnssh < Formula
 
     # set default aws region.
 
+    # until v0.3.9
     rnssh --init
+
+    # after v0.4.0
+    rnssh -init
 
 EOF
   end
