@@ -23,29 +23,29 @@ class Rnssh < Formula
 
   # show message after installation.
   def caveats
-    <<~EOF
-    # rnssh need AWS access key for working.
-    # Please set key/secret to AWS credentials (~/.aws/credentials)
+    <<~EOS
+      # rnssh need AWS access key for working.
+      # Please set key/secret to AWS credentials (~/.aws/credentials)
 
-    [default]
-    aws_access_key_id=your_key_id
-    aws_secret_access_key=your_secret
+      [default]
+      aws_access_key_id=your_key_id
+      aws_secret_access_key=your_secret
 
-    # or environment variable for AWS connection.
-    # (~/.bashrc, ~/.zshrc or other.)
+      # or environment variable for AWS connection.
+      # (~/.bashrc, ~/.zshrc or other.)
 
-    export AWS_ACCESS_KEY_ID=YOUR_AWS_ACCESS_KEY
-    export AWS_SECRET_ACCESS_KEY=YOUR_AWS_SECRET_ACCESS_KEY
+      export AWS_ACCESS_KEY_ID=YOUR_AWS_ACCESS_KEY
+      export AWS_SECRET_ACCESS_KEY=YOUR_AWS_SECRET_ACCESS_KEY
 
-    # set default aws region.
+      # set default aws region.
 
-    # until v0.3.9
-    rnssh --init
+      # until v0.3.9
+      rnssh --init
 
-    # after v0.4.0
-    rnssh -init
+      # after v0.4.0
+      rnssh -init
 
-EOF
+    EOS
   end
 
   test do
