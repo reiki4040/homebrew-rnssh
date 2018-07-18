@@ -1,10 +1,10 @@
 class Rnssh < Formula
-  desc "easy ssh login to EC2."
+  desc "Easy ssh login to EC2"
   homepage "https://github.com/reiki4040/rnssh"
   version "0.4.0"
   normal_sha256 = "9c6a53c9b27bce196a7ac3a52c8b5cbabe12e88415df4a28412f508a834ed58a"
-  devel_version = "0.4.0"
-  devel_sha256 = "9c6a53c9b27bce196a7ac3a52c8b5cbabe12e88415df4a28412f508a834ed58a"
+  devel_version = "0.5.0-dev1"
+  devel_sha256 = "5444d7309e5dae2f8a8a4497633441e9335027fb54c38a23fb16a706403c580c"
 
   if OS.mac?
     url "https://github.com/reiki4040/rnssh/releases/download/v" + version + "/rnssh-" + version + "-darwin-amd64.zip"
@@ -23,7 +23,7 @@ class Rnssh < Formula
 
   # show message after installation.
   def caveats
-    <<-EOF.undent
+    <<EOF.undent
     # rnssh need AWS access key for working.
     # Please set key/secret to AWS credentials (~/.aws/credentials)
 
