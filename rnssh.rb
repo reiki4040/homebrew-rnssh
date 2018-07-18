@@ -2,16 +2,19 @@ class Rnssh < Formula
   desc "easy ssh login to EC2."
   homepage "https://github.com/reiki4040/rnssh"
   version "0.4.0"
+  normal_sha256 = "9c6a53c9b27bce196a7ac3a52c8b5cbabe12e88415df4a28412f508a834ed58a"
   devel_version = "0.4.0"
+  devel_sha256 = "9c6a53c9b27bce196a7ac3a52c8b5cbabe12e88415df4a28412f508a834ed58a"
 
   if OS.mac?
     url "https://github.com/reiki4040/rnssh/releases/download/v" + version + "/rnssh-" + version + "-darwin-amd64.zip"
-    sha256 "9c6a53c9b27bce196a7ac3a52c8b5cbabe12e88415df4a28412f508a834ed58a"
+    sha256 normal_sha256
   end
 
   devel do
-    url "https://github.com/reiki4040/rnssh/releases/download/v" + devel_version + "/rnssh-" + devel_version + "-darwin-amd64.zip"
-    sha256 "9c6a53c9b27bce196a7ac3a52c8b5cbabe12e88415df4a28412f508a834ed58a"
+    url "https://github.com/reiki4040/rnssh/releases/download/" + devel_version + "/rnssh-" + devel_version + "-darwin-amd64.tar.gz"
+    version devel_version
+    sha256 devel_sha256
   end
 
   def install
