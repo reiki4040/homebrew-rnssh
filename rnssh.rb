@@ -1,12 +1,12 @@
 class Rnssh < Formula
   desc "easy ssh login to EC2."
   homepage "https://github.com/reiki4040/rnssh"
-  version "0.3.9"
+  version "0.4.0"
   devel_version = "0.4.0"
 
   if OS.mac?
     url "https://github.com/reiki4040/rnssh/releases/download/v" + version + "/rnssh-" + version + "-darwin-amd64.zip"
-    sha256 "f35a700ade64017806735f25576683c6ccf868805d6b97972ecb239e51372686"
+    sha256 "9c6a53c9b27bce196a7ac3a52c8b5cbabe12e88415df4a28412f508a834ed58a"
   end
 
   devel do
