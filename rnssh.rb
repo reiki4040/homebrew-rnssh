@@ -23,7 +23,7 @@ class Rnssh < Formula
 
   # show message after installation.
   def caveats
-    <<EOF.undent
+    <<~EOF
     # rnssh need AWS access key for working.
     # Please set key/secret to AWS credentials (~/.aws/credentials)
 
